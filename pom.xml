@@ -42,10 +42,12 @@
 		<fastjson.version>1.2.7</fastjson.version>
 		<!-- spring-mvc 版本 -->
 		<spring-mvc.version>4.3.3.RELEASE</spring-mvc.version>
-	
+
 		<pagehelper.version>5.0.0</pagehelper.version>
-		
+
 		<mybatis-generator.version>1.3.2</mybatis-generator.version>
+		
+		<ehcache.version>3.1.3</ehcache.version>
 	</properties>
 
 
@@ -86,6 +88,12 @@
 				<groupId>org.mybatis.generator</groupId>
 				<artifactId>mybatis-generator-core</artifactId>
 				<version>${mybatis-generator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.ehcache</groupId>
+				<artifactId>ehcache</artifactId>
+				<version>${ehcache.version}</version>
 			</dependency>
 
 		</dependencies>
