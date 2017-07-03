@@ -118,7 +118,7 @@
 	 -->
 	<!-- public List<Employee> getEmpsByDeptId(Integer deptId); -->
 	<select id="getEmpsByDeptId" resultType="com.atguigu.mybatis.bean.Employee">
-		select * from tbl_employee where d_id=#{deptId}
+		select * from tbl_employee where d_id = #{deptId}
 	</select>
 	
 	

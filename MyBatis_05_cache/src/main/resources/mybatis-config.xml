@@ -20,7 +20,6 @@
 	<settings>
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 		<setting name="jdbcTypeForNull" value="NULL"/>
-		
 		<!--显式的指定每个我们需要更改的配置的值，即使他是默认的。防止版本更新带来的问题  -->
 		<setting name="cacheEnabled" value="true"/>
 		<setting name="lazyLoadingEnabled" value="true"/>
@@ -62,7 +61,7 @@
 		 
 	<environments default="dev_mysql">
 		<environment id="dev_mysql">
-			<transactionManager type="JDBC"></transactionManager>
+			<transactionManager type="JDBC"/>
 			<dataSource type="POOLED">
 				<property name="driver" value="${jdbc.driver}" />
 				<property name="url" value="${jdbc.url}" />

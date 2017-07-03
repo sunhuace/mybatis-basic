@@ -2,11 +2,6 @@ package com.atguigu.mybatis.test;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -18,9 +13,6 @@ import com.atguigu.mybatis.bean.Department;
 import com.atguigu.mybatis.bean.Employee;
 import com.atguigu.mybatis.dao.DepartmentMapper;
 import com.atguigu.mybatis.dao.EmployeeMapper;
-import com.atguigu.mybatis.dao.EmployeeMapperAnnotation;
-import com.atguigu.mybatis.dao.EmployeeMapperDynamicSQL;
-import com.atguigu.mybatis.dao.EmployeeMapperPlus;
 
 public class MyBatisTest {
 	

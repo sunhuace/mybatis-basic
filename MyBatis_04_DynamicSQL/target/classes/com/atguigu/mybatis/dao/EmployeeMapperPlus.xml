@@ -56,7 +56,6 @@
 		<id column="id" property="id"/>
 		<result column="last_name" property="lastName"/>
 		<result column="gender" property="gender"/>
-		
 		<!--  association可以指定联合的javaBean对象
 		property="dept"：指定哪个属性是联合的对象
 		javaType:指定这个属性对象的类型[不能省略]
@@ -78,11 +77,9 @@
 		2、根据查询员工信息中的d_id值去部门表查出部门信息
 		3、部门设置到员工中；
 	 -->
-	 
-	 <!--  id  last_name email gender d_id   -->
 	 <resultMap type="com.atguigu.mybatis.bean.Employee" id="MyEmpByStep">
 	 	<id column="id" property="id"/>
-	 	<result column="last_name" property="lastName"/>
+	 	<result column="lastname" property="lastName"/>
 	 	<result column="email" property="email"/>
 	 	<result column="gender" property="gender"/>
 	 	<!-- association定义关联对象的封装规则
@@ -92,7 +89,7 @@
 	 	 -->
  		<association property="dept" 
 	 		select="com.atguigu.mybatis.dao.DepartmentMapper.getDeptById"
-	 		column="d_id">
+	 		column="{id=d_id, dept_name=dept_name}" fetchType="lazy">
  		</association>
 	 </resultMap>
 	 <!--  public Employee getEmpByIdStep(Integer id);-->

@@ -3,7 +3,6 @@ package com.atguigu.mybatis.test;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -280,21 +279,34 @@ public class MyBatisTest {
 		}
 	}
 	
+	/**
+	 * 测试级联属性
+	 * @throws IOException
+	 */
 	@Test
 	public void test05() throws IOException{
 		SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
 		SqlSession openSession = sqlSessionFactory.openSession();
 		try{
-			EmployeeMapperPlus mapper = openSession.getMapper(EmployeeMapperPlus.class);
-			/*Employee empById = mapper.getEmpById(1);
-			System.out.println(empById);*/
-			/*Employee empAndDept = mapper.getEmpAndDept(1);
-			System.out.println(empAndDept);
-			System.out.println(empAndDept.getDept());*/
-			Employee employee = mapper.getEmpByIdStep(3);
-			System.out.println(employee);
-			//System.out.println(employee.getDept());
-			System.out.println(employee.getDept());
+//			EmployeeMapperPlus mapper = openSession.getMapper(EmployeeMapperPlus.class);
+//			Employee employee = mapper.getEmpByIdStep(3, "管理部");
+//			System.out.println(employee);
+//			System.out.println(employee.getDept());
+			
+//			DepartmentMapper mapper2 = openSession.getMapper(DepartmentMapper.class);
+//			Map<String, Object> map = new HashMap<>();
+//			map.put("id", 1);
+//			map.put("dept_name", "管理部");
+//			Department deptById = mapper2.getDeptById(map);
+//			System.out.println(deptById);
+			
+//			DepartmentMapper mapper2 = openSession.getMapper(DepartmentMapper.class);
+//			Department deptById = mapper2.getDeptById(1, "管理部");
+//			System.out.println(deptById);
+			
+			DepartmentMapper mapper2 = openSession.getMapper(DepartmentMapper.class);
+			Department deptById = mapper2.getDeptById(1, "管理部");
+			System.out.println(deptById);
 		}finally{
 			openSession.close();
 		}

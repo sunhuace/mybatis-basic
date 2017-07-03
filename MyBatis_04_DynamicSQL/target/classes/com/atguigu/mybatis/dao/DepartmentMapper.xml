@@ -6,7 +6,7 @@
 
 	<!--public Department getDeptById(Integer id);  -->
 	<select id="getDeptById" resultType="com.atguigu.mybatis.bean.Department">
-		select id,dept_name departmentName from tbl_dept where id=#{id}
+		select id,dept_name departmentName from tbl_dept where id=#{id} and dept_name=#{dept_name}
 	</select>
 	
 	<!-- 

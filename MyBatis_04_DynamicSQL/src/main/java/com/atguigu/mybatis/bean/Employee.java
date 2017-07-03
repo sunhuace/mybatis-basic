@@ -15,8 +15,6 @@ public class Employee {
 		super();
 	}
 	
-	
-	
 	public Employee(Integer id, String lastName, String email, String gender,
 			Department dept) {
 		super();
@@ -27,8 +25,6 @@ public class Employee {
 		this.dept = dept;
 	}
 
-
-
 	public Employee(Integer id, String lastName, String email, String gender) {
 		super();
 		this.id = id;
@@ -36,9 +32,6 @@ public class Employee {
 		this.email = email;
 		this.gender = gender;
 	}
-	
-	
-	
 
 	public Department getDept() {
 		return dept;
@@ -78,6 +71,4 @@ public class Employee {
 				+ email + ", gender=" + gender + "]";
 	}
 	
-	
-
 }
